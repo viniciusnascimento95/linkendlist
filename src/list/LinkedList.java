@@ -11,6 +11,7 @@ package list;
  */
 public class LinkedList {
 
+    private static int objlist = 0;
     private Node First;
     private Node Last;
 
@@ -28,6 +29,8 @@ public class LinkedList {
 
     //Methods
     public void Add(Node newNode) {
+        objlist++;
+
         // If list is empty, set the first Node
         if ((First == null) && (Last == null)) {
 
@@ -47,8 +50,9 @@ public class LinkedList {
             System.out.print(Temp.getData() + "->");
             Temp = Temp.getNextNode();
         }
-
-        System.out.println("Null");
+        System.out.println("\n ####");
+        System.out.println("\n Number of object in list = " + objlist);
 
     }
+
 }

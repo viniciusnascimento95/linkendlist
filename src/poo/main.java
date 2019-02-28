@@ -1,5 +1,7 @@
 package poo;
 
+import java.nio.file.Files;
+import javafx.scene.AccessibleAttribute;
 import list.*;
 
 /*
@@ -12,6 +14,8 @@ import list.*;
  * @author dev
  */
 public class main {
+
+    int nb = 0;
 
     /**
      * @param args the command line arguments
