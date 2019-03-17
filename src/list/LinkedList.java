@@ -11,48 +11,65 @@ package list;
  */
 public class LinkedList {
 
-    private static int objlist = 0;
-    private Node First;
-    private Node Last;
+    protected Node First;
+    protected Node Last;
 
-    //Construtor
+    //Constructor
     public LinkedList() {
+        First = null;
+        Last = null;
     }
 
     public LinkedList(Node Nod) {
-
-        First = Nod;
-
-        Last = Nod;
-
+        this.First = Nod;
+        this.Last = Nod;
     }
 
-    //Methods
-    public void Add(Node newNode) {
-        objlist++;
+    protected void setEmpty() {
+        this.First = null;
+        this.Last = null;
+    } 
 
-        // If list is empty, set the first Node
+    public boolean isEmpty() {
         if ((First == null) && (Last == null)) {
+            return true;
+        }
+        return false;
+    }
 
+    // Methods 
+    public void Add(Node newNode) {
+        //If list is empty, set First Node
+        if ((First == null) && (Last == null)) {
             this.First = newNode;
             this.Last = newNode;
-        } //There is an element in List
-        else {
+        } else {
             this.Last.setNextNode(newNode);
             this.Last = newNode;
         }
+
     }
 
     public void Print() {
         Node Temp = First;
-
         while (Temp != null) {
-            System.out.print(Temp.getData() + "->");
+            System.out.print(Temp.getDate() + "->");
             Temp = Temp.getNextNode();
         }
-        System.out.println("\n ####");
-        System.out.println("\n Number of object in list = " + objlist);
+        System.out.println("null");
 
     }
 
+    public void Counter() {
+        Node Temp = First;
+        int i = 0;
+        while (Temp != null) {
+            Temp.getDate();
+            Temp = Temp.getNextNode();
+            i++;
+        }
+        System.out.println("The amount of elements in the list: " + i);
+    }
+
+   
 }

@@ -5,6 +5,8 @@
  */
 package list;
 
+import java.util.Date;
+
 /**
  *
  * @author dev
@@ -12,35 +14,49 @@ package list;
 public class Node {
 
     //Class Attributes
-    private String Data;
+    private String Date;
     private Node NextNode;
+    private Node PriorNode;
+// Constructors
 
-    //Constructors
     public Node() {
-        Data = "";
+        Date = "";
         NextNode = null;
+        PriorNode = null;
 
     }
+//Setteres
 
-    public Node(String Data) {
-        this.Data = Data;
+    public Node(String Date) {
+        this.Date = Date;
+        this.NextNode = null;
+        PriorNode = null;
+    }
+
+    public void setDate(String Date) {
+        // Operador This is for class Attributs or Methos
+        this.Date = Date;
         NextNode = null;
     }
 
-    public String getData() {
-        return Data;
+    public void setNextNode(Node NextNode) {
+        this.NextNode = NextNode;
     }
 
-    public void setData(String Data) {
-        this.Data = Data;
+    public String getDate() {
+        return Date;
     }
 
     public Node getNextNode() {
         return NextNode;
     }
 
-    public void setNextNode(Node NextNode) {
-        this.NextNode = NextNode;
+    public Node getPriorNode() {
+        return PriorNode;
+    }
+
+    public void setPriorNode(Node PriorNode) {
+        this.PriorNode = PriorNode;
     }
 
 }

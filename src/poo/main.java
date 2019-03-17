@@ -39,9 +39,9 @@ public class main {
          */
         //Learn linkedList
         //creating Nodes
-        Node N1 = new Node("vinicius");
-        Node N2 = new Node("vini");
-        Node N3 = new Node("vini2");
+        Node N1 = new Node("A");
+        Node N2 = new Node("B");
+        Node N3 = new Node("C");
 
         //linkedlist
         LinkedList List = new LinkedList();
@@ -52,6 +52,20 @@ public class main {
 
         //printing list information
         List.Print();
+
+        System.out.println("##########################\n############################");
+        System.out.println("Stack mode");
+
+        Stack stack = new Stack();
+
+        stack.Push(N1);
+        stack.Push(N2);
+        stack.Push(N3);
+        stack.Print();
+        stack.Pop();
+        stack.Print();
+        stack.Top();
+        stack.Size();
 
     }
 
