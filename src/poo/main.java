@@ -66,6 +66,31 @@ public class main {
         stack.Print();
         stack.Top();
         stack.Size();
+        
+        
+        System.out.println("Queue Activity ");
+        
+        Queue myQueue = new Queue();
+        myQueue.Enqueue("A");
+        myQueue.Enqueue("B");
+        myQueue.Enqueue("C");
+        myQueue.Front();
+        System.out.println("Size: "+myQueue.Size());
+        myQueue.Print();
+        
+        System.out.println("\nDequeue " + myQueue.Dequeue());
+        System.out.println("Size: "+myQueue.Size());
+        myQueue.Front();
+        myQueue.Print();
+        System.out.println("\nDequeue " + myQueue.Dequeue());
+        System.out.println("Size: "+myQueue.Size());
+        myQueue.Front();
+        myQueue.Print();
+        System.out.println("\nDequeue " + myQueue.Dequeue());
+        System.out.println("Size: "+myQueue.Size());
+        myQueue.Print();
+        System.out.println("\nDequeue " + myQueue.Dequeue());
+        myQueue.Print();
 
     }
 
